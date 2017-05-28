@@ -1,0 +1,14 @@
+{
+  "name": "@rispa/generator",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "repository": "https://github.com/rispa-io/rispa-generator.git",
+  "author": "Andrew Laiff",
+  "license": "MIT",
+  "devDependencies": {
+    "@rispa/eslint-config": "^1.0.1"
+  },
+  "dependencies": {
+    "node-plop": "^0.6.0"
+  }
+}
