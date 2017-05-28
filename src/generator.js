@@ -1,19 +1,22 @@
 const createPlop = require('node-plop')
 
 const { optionalRequire } = require('./utils/require')
+const configureBaseGenerators = require('./generators')
 
-const createBaseGenerators = require('./generators')
-
-module.exports = (generatorsPaths = [], distPath = process.cwd()) => {
+const configureGenerators = (distPath = process.cwd(), generatorsPaths = []) => {
   const plop = createPlop()
 
-  createBaseGenerators(plop, distPath)
+  plop.containsGenerator = generatorName => plop.getGeneratorList().some(({ name }) => name === generatorName)
+
+  configureBaseGenerators(plop, distPath)
 
   generatorsPaths
     .filter((generatorPath, idx) => generatorsPaths.indexOf(generatorPath) === idx)
     .map(optionalRequire)
-    .filter(generators => generators)
-    .forEach(setGenerators => setGenerators(plop, distPath))
+    .filter(configurePluginGenerators => configurePluginGenerators)
+    .forEach(configurePluginGenerators => configurePluginGenerators(plop, distPath))
 
   return plop
 }
+
+module.exports = configureGenerators

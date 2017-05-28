@@ -6,31 +6,31 @@ module.exports = distPath => ({
   actions: () => ([
     {
       type: 'add',
-      path: './{{ projectName}}/.editorconfig',
+      path: './.editorconfig',
       templateFile: './.editorconfig.hbs',
       abortOnFail: false,
     },
     {
       type: 'add',
-      path: './{{ projectName}}/.gitignore',
+      path: './.gitignore',
       templateFile: './.gitignore.hbs',
       abortOnFail: false,
     },
     {
       type: 'add',
-      path: './{{ projectName}}/.travis.yml',
+      path: './.travis.yml',
       templateFile: './.travis.yml.hbs',
       abortOnFail: false,
     },
     {
       type: 'add',
-      path: './{{ projectName}}/lerna.json',
+      path: './lerna.json',
       templateFile: './lerna.json.hbs',
       abortOnFail: true,
     },
     {
       type: 'add',
-      path: './{{ projectName}}/package.json',
+      path: './package.json',
       templateFile: './package.json.hbs',
       abortOnFail: true,
     },
