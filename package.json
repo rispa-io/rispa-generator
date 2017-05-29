@@ -1,6 +1,7 @@
 {
   "name": "@rispa/generator",
   "version": "1.0.0",
+  "description": "Generators for rispa",
   "main": "./index.js",
   "repository": "https://github.com/rispa-io/rispa-generator.git",
   "author": "Andrew Laiff",
