@@ -7,7 +7,8 @@
   "author": "Andrew Laiff",
   "license": "MIT",
   "dependencies": {
-    "node-plop": "^0.6.0"
+    "node-plop": "^0.6.0",
+    "babel-register": "^6.24.1"
   },
   "devDependencies": {
     "@rispa/eslint-config": "2.0.1",
