@@ -1,3 +1,5 @@
+require('babel-register')
+
 const createPlop = require('node-plop')
 
 const { optionalRequire } = require('./utils/require')
