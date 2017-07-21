@@ -14,7 +14,10 @@ describe('configure generator', () => {
   })
 
   it('should success configure generator', () => {
-    const generatorsFunc = jest.fn()
+    const generatorsPostFunc = jest.fn()
+    const generatorsFunc = Object.assign(jest.fn(), {
+      post: generatorsPostFunc,
+    })
 
     mockRequire.setMockModules(generatorsPaths.reduce((modules, generatorsPath) => {
       modules[generatorsPath] = generatorsFunc
@@ -26,6 +29,7 @@ describe('configure generator', () => {
     expect(generator.containsGenerator('project')).toBe(true)
 
     expect(generatorsFunc).toBeCalled()
+    expect(generatorsPostFunc).toBeCalled()
   })
 
   it('should success configure generator with default', () => {
