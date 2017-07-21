@@ -1,6 +1,6 @@
 {
   "name": "@rispa/generator",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Generators for rispa",
   "main": "./index.js",
   "repository": "https://github.com/rispa-io/rispa-generator.git",
@@ -11,7 +11,7 @@
     "node-plop": "^0.6.0"
   },
   "devDependencies": {
-    "@rispa/eslint-config": "2.0.1",
+    "@rispa/eslint-config": ">=3.0.0",
     "jest": "^20.0.3"
   },
   "scripts": {
