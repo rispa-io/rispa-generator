@@ -24,12 +24,6 @@ module.exports = distPath => ({
     },
     {
       type: 'add',
-      path: './lerna.json',
-      templateFile: './lerna.json.hbs',
-      abortOnFail: true,
-    },
-    {
-      type: 'add',
       path: './package.json',
       templateFile: './package.json.hbs',
       abortOnFail: true,
