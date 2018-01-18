@@ -1,14 +1,15 @@
 {
   "name": "{{ projectName }}",
   "version": "0.1.0",
-  "repository": "https://github.com/CSSSR",
-  "author": "Andrew Laiff <q.laiff@gmail.com>",
   "private": true,
-  "dependencies": {
-    "lerna": "^2.0.0"
+  "devDependencies": {
+    "lerna": "^2.4.0"
   },
   "scripts": {
-    "bs": "lerna bootstrap",
-    "postinstall": "lerna bootstrap && ris clean-cache"
-  }
+    "bs": "yarn install && ris all compile",
+    "postinstall": "ris clean-cache"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
